@@ -1,0 +1,178 @@
+<!-- NabBar Start -->
+<nav class="navbar navbar-light navbar-expand-md bg-light sticky-top">
+  <!-- Container wrapper Start -->
+  <div class="container-fluid container-lg">
+
+    <!--Navbar Left elements Start -->
+    <!-- Navbar Toggle button Start -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+      aria-controls="offcanvasNavbar" aria-label="ToggleButton">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Navbar Toggle button End -->
+    <!-- Whatsapp Symbol Shown on md less Start -->
+    <a href="https://api.whatsapp.com/send?phone=917087214319&text=Hi!%20Could%20you%20help%20me%20with%20a%20few%20queries!"
+      target="_blank" rel="noopener" class="logo mx-left d-md-none d-block">
+      <img src="./assets/image/navbar/whatsapp.svg" alt="whatsapp" />
+    </a>
+    <!-- Whatsapp Symbol Shown on md less End -->
+    <!--Navbar Left elements -->
+
+    <!-- Navbar Brand Start -->
+    <a class="navbar-brand mx-auto" href="#">Company</a>
+    <!-- Navbar Brand End -->
+
+    <!-- Navbar Collapsible wrapper Start -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <!-- Collapsible wrapper Header Start -->
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Company Name</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <!-- Collapsible wrapper Header End -->
+      <!-- Collapsible wrapper Body Start -->
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-start flex-grow-1 pe-3 text-center">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/Home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/Store/ProductList">Store</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/Blog">Blog</a>
+          </li>
+          <!-- More Shown at md or More Start-->
+          <li class="nav-item dropdown d-none d-md-block">
+            <a class="nav-link dropdown-toggle" id="MoreDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              More
+            </a>
+            <ul class="dropdown-menu text-center" aria-labelledby="MoreDropdown">
+              <li><a class="dropdown-item" routerLink="/More/AboutUs">About Us</a></li>
+              <li><a class="dropdown-item" routerLink="/More/Contact">Contact</a></li>
+              <li><a class="dropdown-item" routerLink="/More/FAQ">FAQ</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" routerLink="/More/TeamsAndCondition">Teams & Condition</a></li>
+            </ul>
+          </li>
+          <!-- More Shown at md or More End -->
+          <!-- More Shown at md less Start -->
+          <div class="d-md-none d-block">
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/More/AboutUs">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/More/Contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/More/FAQ">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/More/TeamsAndCondition">Teams & Condition</a>
+            </li>
+          </div>
+          <!-- More Shown at md less End -->
+        </ul>
+      </div>
+      <!-- Collapsible wrapper Body End -->
+      <!-- Collapsible wrapper Footer Shown at md less Start -->
+      <div *ngIf="isUserLoginIn; then collapsibleWrapperFooterLoggedIn ;else collapsibleWrapperFooterLoggedOut"> </div>
+      <!-- Collapsible wrapper Footer Shown at md less End -->
+    </div>
+    <!-- Navbar Collapsible wrapper End -->
+
+    <!-- Navbar Right elements Start -->
+    <!-- Whatsapp Symbol Shown on md or More Start -->
+    <a href="https://api.whatsapp.com/send?phone=917087214319&text=Hi!%20Could%20you%20help%20me%20with%20a%20few%20queries!"
+      target="_blank" rel="noopener" class="logo mx-right d-none d-md-block">
+      <img src="./assets/image/navbar/whatsapp.svg" alt="whatsapp" />
+    </a>
+    <!-- Whatsapp Symbol Shown on md or More End -->
+    <!-- Wishlist Symbol Start -->
+    <a routerLink="/Wishlist" class="logo mx-left">
+      <img src="./assets/image/navbar/wishlist.svg" alt="Wishlist" />
+    </a>
+    <!-- Wishlist Symbol End -->
+    <!-- Cart Symbol Start -->
+    <a routerLink="/Cart" class="logo mx-left">
+      <img src="./assets/image/navbar/cart.svg" alt="Cart" />
+    </a>
+    <!-- Cart Symbol End -->
+    <!-- Account Symbol Shown on md or More Start -->
+    <div *ngIf="isUserLoginIn; then navbarLoggedIn ;else navbarLoggedOut"> </div>
+    <!-- Account Symbol Shown on md or More End -->
+    <!-- Navbar Right elements End -->
+
+  </div>
+  <!-- Container wrapper End -->
+</nav>
+<!-- NabBar End -->
+
+<!-- Navbar Section Start-->
+<!-- If condition Start -->
+<ng-template #navbarLoggedIn>
+  <div class="logo dropdown mx-left d-none d-md-block">
+    <a class="dropdown-toggle" id="AccountDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <img src="./assets/image/navbar/account.svg" alt="Account" />
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end text-center" aria-labelledby="AccountDropdown">
+      <li><a class="dropdown-item" routerLink="">Account Information</a></li>
+      <li><a class="dropdown-item" routerLink="">Order History</a></li>
+      <li><a class="dropdown-item" routerLink="">Track Order</a></li>
+      <li><a class="dropdown-item" routerLink="">Support</a></li>
+      <li><a class="dropdown-item" routerLink="">Logout</a></li>
+    </ul>
+  </div>
+</ng-template>
+<!-- If condition End -->
+<!-- Else condition Start-->
+<ng-template #navbarLoggedOut>
+  <a routerLink="/Account" class="logo mx-left d-none d-md-block">
+    <img src="./assets/image/navbar/account.svg" alt="Account" />
+  </a>
+</ng-template>
+<!-- Else condition End-->
+<!-- Navbar Section End-->
+
+<!-- Collapsible Wrapper Footer Section Start-->
+<!-- If condition Start-->
+<ng-template #collapsibleWrapperFooterLoggedIn>
+  <div class="offcanvas-footer d-md-none d-block">
+    <ul class="navbar-nav justify-content-start flex-grow-1 pe-3 text-center">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="">Account Information</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="">Order History</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="">Track Order</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="">Support</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="">Logout</a>
+      </li>
+    </ul>
+  </div>
+</ng-template>
+<!-- If condition End -->
+<!-- Else condition Start-->
+<ng-template #collapsibleWrapperFooterLoggedOut>
+  <div class="offcanvas-footer d-md-none d-block">
+    <ul class="navbar-nav justify-content-start flex-grow-1 pe-3 text-center">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="">Register</a>
+      </li>
+    </ul>
+  </div>
+</ng-template>
+<!-- Else condition End-->
+<!-- Collapsible Wrapper Footer Section End-->

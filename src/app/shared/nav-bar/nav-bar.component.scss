@@ -1,0 +1,42 @@
+/* Icone size fixed */
+img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Navbar Toggle button */
+.navbar-toggler {
+  border: none !important;
+  color: white;
+  padding: 0rem !important;
+  margin-left: 0.25rem !important;
+  margin-right: 0.25rem !important;
+}
+
+/* Navbar Brand  */
+.navbar-brand {
+  font-size: 1.5rem;
+  align-items: center;
+}
+
+/* Navbar Collapsible wrapper */
+.offcanvas {
+  width: 100% !important;
+}
+
+/* Collapsible wrapper Left links */
+.nav-item {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Removed the drop down Arrow*/
+.dropdown-toggle::after {
+  display: none;
+}
+
+/* Navbar Right elements */
+.logo {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
