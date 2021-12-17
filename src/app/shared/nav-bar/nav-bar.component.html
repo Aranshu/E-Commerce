@@ -1,12 +1,12 @@
 <!-- NabBar Start -->
-<nav class="navbar navbar-light navbar-expand-md bg-light sticky-top">
+<header class="navbar navbar-light navbar-expand-md bg-light sticky-top">
   <!-- Container wrapper Start -->
   <div class="container-fluid container-lg">
 
     <!--Navbar Left elements Start -->
     <!-- Navbar Toggle button Start -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-      aria-controls="offcanvasNavbar" aria-label="ToggleButton">
+    <button class="navbar-toggler p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#Navbar"
+      aria-controls="Navbar" aria-label="ToggleButton">
       <span class="navbar-toggler-icon"></span>
     </button>
     <!-- Navbar Toggle button End -->
@@ -16,14 +16,15 @@
       <img src="./assets/image/navbar/whatsapp.svg" alt="whatsapp" />
     </a>
     <!-- Whatsapp Symbol Shown on md less End -->
-    <!--Navbar Left elements -->
+    <!--Navbar Left elements End-->
 
     <!-- Navbar Brand Start -->
     <a class="navbar-brand mx-auto" href="#">Company</a>
     <!-- Navbar Brand End -->
 
     <!-- Navbar Collapsible wrapper Start -->
-    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+    <nav class="offcanvas offcanvas-start border-0 w-100" tabindex="-1" id="Navbar"
+      aria-labelledby="offcanvasNavbarLabel">
       <!-- Collapsible wrapper Header Start -->
       <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Company Name</h5>
@@ -81,7 +82,7 @@
       <!-- Collapsible wrapper Footer Shown at md less Start -->
       <div *ngIf="isUserLoginIn; then collapsibleWrapperFooterLoggedIn ;else collapsibleWrapperFooterLoggedOut"> </div>
       <!-- Collapsible wrapper Footer Shown at md less End -->
-    </div>
+    </nav>
     <!-- Navbar Collapsible wrapper End -->
 
     <!-- Navbar Right elements Start -->
@@ -108,7 +109,7 @@
 
   </div>
   <!-- Container wrapper End -->
-</nav>
+</header>
 <!-- NabBar End -->
 
 <!-- Navbar Section Start-->
