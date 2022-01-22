@@ -2,13 +2,13 @@
 <section class="text-center">
 
     <!-- Heading Start-->
-    <h2 class="mb-4">Contact</h2>
+    <h2 class="py-2 mb-4">Contact</h2>
     <!-- Heading End-->
 
     <!--Google map Start-->
     <article class="z-depth-1 map-container mb-5">
-        <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" loading="lazy" allowfullscreen
-            title="Address"
+        <iframe class="skeleton" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" loading="lazy"
+            allowfullscreen title="Address"
             src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Phase-4,%20Mohali,India+(E-Commerce%20)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
         </iframe>
     </article>
@@ -32,18 +32,31 @@
         <!--Grid column Right Start-->
         <div class="col-md-7 col-12">
             <!--Form Start-->
-            <form>
+            <form action="https://formsubmit.co/aranshu552@gmail.com" method="POST">
+                <!-- Form Submit Setting Start-->
+                <!--input type="hidden" name="_next" value="http://localhost:4200/Home"-->
+                <!-- input type="hidden" name="_cc" value="another@email.com" -->
+                <input type="hidden" name="_subject" value="New submission!">
+                <input type="hidden" name="_template" value="box">
+                <input type="hidden" name="_captcha" value="false">
+                <!-- Form Submit Setting End-->
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingName" placeholder="name" required>
+                    <input type="text" name="name" class="form-control" id="floatingName" placeholder="name" required>
                     <label for="floatingName">Name</label>
                 </div>
                 <div class="form-floating mb-3">
-                    <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com" required>
+                    <input type="email" name="email" class="form-control" id="floatingEmail"
+                        placeholder="name@example.com" required>
                     <label for="floatingEmail">Email Address</label>
                 </div>
                 <div class="form-floating mb-3">
-                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingComment"
-                        style="height: 100px" required></textarea>
+                    <input type="number" name="number" class="form-control" id="floatingNumber" placeholder="1234567890"
+                        required>
+                    <label for="floatingNumber">Phone Number</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <textarea type="text" name="message" class="form-control" id="floatingComment"
+                        placeholder="Leave a comment here" style="height: 100px" required></textarea>
                     <label for="floatingComment">Comments</label>
                 </div>
                 <button type="submit" class="btn btn-primary btn-md ml-0 waves-effect waves-light">Send</button>

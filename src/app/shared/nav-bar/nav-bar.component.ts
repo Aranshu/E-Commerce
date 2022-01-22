@@ -9,7 +9,7 @@ export class NavBarComponent implements OnInit {
   /**
    * Boolean variable used to check weather user is login or not
    */
-  isUserLoginIn: boolean = true;
+  isUserLoginIn: boolean = false;
 
   constructor() {}
 

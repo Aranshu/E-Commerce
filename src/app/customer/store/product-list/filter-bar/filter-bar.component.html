@@ -1,18 +1,29 @@
-<section>
-    <article class="d-flex justify-content-between">
+<section class="mb-2">
+    <div class="form-floating mb-1 rounded d-md-none d-block">
+        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+        <label for="floatingPassword">Password</label>
+    </div>
+    <article class="d-flex flex-row align-items-center justify-content-between">
         <b>iteam found</b>
-        <select class="form-select w-auto border-0" aria-label="Default select example">
-            <option selected>Open this select menu</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-        </select>
+        <div class="form-floating rounded w-50  d-none d-md-block">
+            <input type="text" class="form-control" id="Search" placeholder="Search">
+            <label for="Search">Search</label>
+        </div>
+        <div class="d-flex flex-row align-items-center">
+            <label for="cars" class="pe-2"><b>Sort By:</b></label>
+            <select class="form-select w-auto border-0" id="cars" aria-label="Default select example">
+                <option class="border-0" selected>Relevent</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+        </div>
     </article>
     <hr>
     <nav class="navbar navbar-light navbar-expand-md">
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#FilterNavbar"
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#FilterNavbar"
             aria-controls="offcanvasNavbar">
-            <span class="navbar-toggler-icon"></span>
+            <img src="./assets/image/filter-bar/filter.svg" />
         </button>
         <div class="offcanvas offcanvas-bottom" tabindex="-1" id="FilterNavbar" aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-header">
@@ -22,33 +33,33 @@
             </div>
             <div class="offcanvas-body">
                 <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
-                    <li class="nav-item">
+                    <li class="nav-item p-1">
                         <select class="form-select" aria-label="Default select example">
-                            <option selected>Open this select menu</option>
+                            <option selected>Open this </option>
                             <option value="1">One</option>
                             <option value="2">Two</option>
                             <option value="3">Three</option>
                         </select>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item p-1">
                         <select class="form-select" aria-label="Default select example">
-                            <option selected>Open this select menu</option>
+                            <option selected>Open this </option>
                             <option value="1">One</option>
                             <option value="2">Two</option>
                             <option value="3">Three</option>
                         </select>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item p-1">
                         <select class="form-select" aria-label="Default select example">
-                            <option selected>Open this select menu</option>
+                            <option selected>Open this </option>
                             <option value="1">One</option>
                             <option value="2">Two</option>
                             <option value="3">Three</option>
                         </select>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item p-1">
                         <select class="form-select" aria-label="Default select example">
-                            <option selected>Open this select menu</option>
+                            <option selected>Open this</option>
                             <option value="1">One</option>
                             <option value="2">Two</option>
                             <option value="3">Three</option>
@@ -56,6 +67,14 @@
                     </li>
                 </ul>
             </div>
+        </div>
+        <div class="mx-right">
+            <button type="button" class="btn">
+                <img src="./assets/image/filter-bar/grid big.svg" />
+            </button>
+            <button type="button" class="btn">
+                <img src="./assets/image/filter-bar/grid small.svg" />
+            </button>
         </div>
     </nav>
 </section>
